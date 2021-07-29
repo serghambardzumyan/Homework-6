@@ -1,0 +1,27 @@
+class Rectangle{
+    constructor(length,width){
+        this.length = length;
+        this.width = width;
+    }
+    get length(){
+        return this._length;
+    }
+    set length(value){
+        this._length = value;
+    }
+    get width(){
+        return this._width;
+    }
+    set width(value){
+        this._width = value;
+    }
+    getArea(){
+        return this.length * this.width;
+    }
+    getPerimeter(){
+        return 2 * (this.length + this.width);
+    }
+    toString(){
+        return JSON.stringify(this);
+    }
+}

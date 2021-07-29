@@ -1,0 +1,25 @@
+class Employee{
+    constructor({id,firstName,lastName,position,salary,workingHours} = {}){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.salary = salary;
+        this.workingHours = workingHours;
+    }
+    get id(){
+        return this._id;
+    }
+    set id(value){
+        this._id = value;
+    }
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+    getAnnularSalary(){
+        return 12 * this.salary;
+    }
+    raiseSalary(percent){
+        return this.salary = this.salary + (this.salary * percent) / 100;
+    }
+}
